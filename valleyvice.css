@@ -1,0 +1,483 @@
+/* ============================================================
+   VALLEYVICE RETRO THEME — FULL CSS REBUILD (v6)
+   Palette: Your base + expanded complimentary colors
+   Style: Vintage Web + Synthwave + Appetizing Color Harmony
+   ============================================================ */
+
+   @import url('https://fonts.googleapis.com/css?family=Bitcount%20Single:700|Bitcount%20Single:400');
+
+   /* ============================================================
+      GLOBAL FONT SETTINGS
+      ============================================================ */
+   
+   header {
+     font-family: 'Bitcount Single';
+     font-weight: 1000;
+   }
+   
+   body {
+     font-family: 'Bitcount Single';
+     font-weight: 400;
+   }
+   
+   h1, h2, h3, h4, h5 {
+     font-family: 'Bitcount Single';
+     font-weight: 700;
+   }
+   
+   html { font-size: 100%; }
+   
+   h1 { font-size: 4.210rem; }
+   h2 { font-size: 3.158rem; }
+   h3 { font-size: 2.369rem; }
+   h4 { font-size: 1.777rem; }
+   h5 { font-size: 1.333rem; }
+   small { font-size: 0.750rem; }
+   
+   /* ============================================================
+      ROOT PALETTE
+      ============================================================ */
+   
+   :root {
+     --text: #F7DCEB;
+     --background: #0A0A0C;
+     --primary: #A89BC4;
+     --secondary: #4A2E1F;
+     --accent: #7A4A2F;
+   
+     --comp-primary-1: #4FFFCF;
+     --comp-primary-2: #2BB8A6;
+     --comp-primary-3: #1F7F73;
+   
+     --comp-secondary-1: #7FA8FF;
+     --comp-secondary-2: #4F6A99;
+     --comp-secondary-3: #2C3A4F;
+   
+     --comp-accent-1: #FFB08A;
+     --comp-accent-2: #FF8C5C;
+     --comp-accent-3: #C96A42;
+   
+     --neutral-1: #1A1A22;
+     --neutral-2: #2E2E38;
+     --neutral-3: #454553;
+   
+     --radius: 10px;
+   }
+   
+   /* ============================================================
+      GLOBAL
+      ============================================================ */
+   
+   body {
+     margin: 0;
+     background: var(--background);
+     color: var(--text);
+     line-height: 1.5;
+   }
+   
+   /* ============================================================
+      HEADER
+      ============================================================ */
+   
+   .vv-header {
+     background: #000000;
+     padding: 18px;
+     border-bottom: 2px solid var(--accent);
+     text-align: center;
+   }
+   
+   .vv-logo {
+     font-size: 2rem;
+     color: var(--text);
+     letter-spacing: 3px;
+     font-weight: bold;
+   }
+   
+   /* ============================================================
+      NAVIGATION
+      ============================================================ */
+   
+   .vv-nav {
+     margin-top: 10px;
+   }
+   
+   .vv-nav a {
+     color: var(--primary);
+     text-decoration: none;
+     margin: 0 12px;
+     font-size: 0.9rem;
+     transition: 0.2s ease;
+   }
+   
+   .vv-nav a:hover {
+     color: var(--comp-accent-2);
+   }
+   
+   /* ============================================================
+      HERO
+      ============================================================ */
+   
+   .vv-hero {
+     padding: 60px 20px;
+     text-align: center;
+     background: var(--neutral-1);
+     border-bottom: 2px solid var(--accent);
+   }
+   
+   .vv-hero-title {
+     font-size: 2.2rem;
+     color: var(--text);
+   }
+   
+   .vv-hero-sub {
+     margin-top: 8px;
+     color: var(--primary);
+   }
+   
+   /* ============================================================
+      MAIN WRAPPER
+      ============================================================ */
+   
+   .vv-shell {
+    background: url('/images/background.jpg') center/cover no-repeat;
+     max-width: 900px;
+     margin: auto;
+     padding: 20px;
+   }
+   
+   /* ============================================================
+      SECTION TITLES
+      ============================================================ */
+   
+   .vv-section {
+     margin-bottom: 50px;
+   }
+   
+   .vv-section-title {
+     font-size: 1.4rem;
+     margin-bottom: 16px;
+     border-left: 4px solid var(--comp-accent-2);
+     padding-left: 10px;
+     color: var(--text);
+   }
+   
+   /* ============================================================
+      CARDS
+      ============================================================ */
+   
+   .vv-card {
+     background: var(--neutral-1);
+     border: 1px solid var(--comp-accent-1);
+     border-radius: var(--radius);
+     padding: 18px;
+     margin-bottom: 30px;
+     transition: 0.25s ease;
+   }
+   
+   .vv-card:hover {
+     box-shadow: 0 0 20px var(--comp-accent-2);
+     transform: translateY(-3px);
+   }
+   
+   /* ============================================================
+      VIDEO SECTION
+      ============================================================ */
+   
+   .vv-card-title,
+   .vv-card-meta {
+     font-family: "Bitcount Single";
+   }
+   
+   .vv-card-title {
+     font-size: 1.1rem;
+     font-weight: bold;
+     color: var(--text);
+   }
+   
+   .vv-card-meta {
+     font-size: 0.9rem;
+     color: var(--primary);
+   }
+   
+   .vv-video-frame {
+     position: relative;
+     padding-bottom: 56.25%;
+     height: 0;
+     border-radius: var(--radius);
+     overflow: hidden;
+     border: 2px solid var(--primary);
+   }
+   
+   .vv-video-frame iframe {
+     position: absolute;
+     inset: 0;
+     width: 100%;
+     height: 100%;
+   }
+   
+   /* ============================================================
+      TRACK LIST
+      ============================================================ */
+   
+   .vv-track-list {
+     display: flex;
+     flex-direction: column;
+     gap: 40px;
+   }
+   
+
+
+/* ============================================================
+   TRACK CARD — FIXED LAYOUT (SCRUB BAR ALWAYS VISIBLE)
+   ============================================================ */
+
+   .vv-track-card {
+    display: grid;
+    grid-template-columns: 1fr 280px; /* text on left, audio player on right */
+    align-items: center;
+    column-gap: 20px;                /* spacing between text + player */
+}
+
+
+   
+   /* ============================================================
+      TRACK TEXT
+      ============================================================ */
+   
+   .vv-track-title,
+   .vv-track-meta {
+     font-family: "Bitcount Single";
+   }
+   
+   .vv-track-title {
+     font-size: 1.1rem;
+     font-weight: bold;
+     color: var(--text);
+   }
+   
+   .vv-track-meta {
+     font-size: 0.9rem;
+     color: var(--primary);
+   }
+   
+   /* ============================================================
+      AUDIO PLAYER — FIXED + RESTORED SCRUBBING
+      ============================================================ */
+   
+   /* ============================================================
+   AUDIO PLAYER — CLEAN SPACING + SCRUB RESTORED
+   ============================================================ */
+
+/* ============================================================
+   REMOVE AUDIO DOWNLOAD BUTTON (FINAL + CROSS‑BROWSER)
+   ============================================================ */
+
+/* Hide the download button itself */
+audio::-webkit-media-controls-download-button {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Hide the entire "extra controls" group where Chrome sometimes puts it */
+audio::-webkit-media-controls-enclosure {
+  overflow: hidden !important;
+}
+
+/* Hide the "overflow menu" that sometimes contains download */
+audio::-webkit-media-controls-overflow-button {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Hide the "cast" button*/
+audio::-webkit-media-controls-cast-button {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+
+.vv-track-card audio {
+  width: 100%;            /* fills the 280px grid column */
+  min-width: 240px;       /* guarantees scrub bar */
+  margin-left: -6px;      /* gentle shift left */
+}
+
+audio {
+  border-radius: 500px;
+  background: var(--neutral-2);
+  box-shadow: 0 0 14px var(--comp-primary-3);
+}
+
+   
+   /* PLAY BUTTON */
+   audio::-webkit-media-controls-play-button {
+    background-color: #e9d1b5 !important;
+    border-radius: 50%;
+    transform: scale(1.3);
+    filter: brightness(1.5) drop-shadow(0 0 6px var(--comp-accent-2)) !important;
+    margin-right: 14px !important;
+}
+
+   
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    margin-left: 10px !important;
+    filter: brightness(1.4);
+    color: var(--comp-accent-2);
+    font-family: 'Bitcount Single';
+}
+
+   
+   /* CONTROL BAR */
+   audio::-webkit-media-controls-panel {
+     background-color: var(--neutral-3) !important;
+  
+   }
+  /* ============================================================
+   AUDIO SCRUBBER + VOLUME COLOR CUSTOMIZATION
+   ============================================================ */
+
+/* Timeline (scrubber) bar background */
+audio::-webkit-media-controls-timeline {
+  background-color: var(--neutral-2) !important;   /* scrubber track */
+  border-radius: 200px !important;
+}
+
+
+
+
+
+/* Timeline progress (the filled part) */
+audio::-webkit-media-controls-timeline-container {
+  background-color: var(--comp-primary-1) !important; /* mint cyber progress */
+}
+
+/* Volume slider track */
+audio::-webkit-media-controls-volume-slider {
+  background-color: var(--neutral-2) !important;   /* slider track */
+  border-radius: 200px !important;
+}
+
+/* Volume slider knob */
+audio::-webkit-media-controls-volume-slider-container {
+  background-color: var(--comp-accent-2) !important; /* sunset neon knob */
+  border-radius: 50% !important;
+}
+
+
+   
+   /* ============================================================
+      ABOUT
+      ============================================================ */
+   
+   .vv-about {
+     line-height: 1.6;
+     color: var(--primary);
+   }
+   
+   /* ============================================================
+      FOOTER
+      ============================================================ */
+   
+   .vv-footer {
+     text-align: center;
+     padding: 30px;
+     color: var(--primary);
+     border-top: 2px solid var(--accent);
+     margin-top: 40px;
+   }
+   
+   .vv-backtotop a {
+     display: inline-block;
+     margin-top: 10px;
+     color: var(--comp-secondary-1);
+     text-decoration: none;
+   }
+   
+   .vv-backtotop a:hover {
+     color: var(--comp-accent-2);
+   }
+
+   /* ============================================================
+   REMOVE AUDIO DOWNLOAD BUTTON (NO THEFT)
+   ============================================================ */
+
+
+
+
+/* ============================================================
+   RESPONSIVE — TRACK CARDS
+   ============================================================ */
+
+   @media (max-width: 600px) {
+    .vv-track-card {
+      grid-template-columns: 1fr;   /* stack text + audio */
+      row-gap: 16px;
+    }
+  
+    .vv-track-card audio {
+      width: 100%;
+      min-width: unset;
+      margin-left: 0;
+    }
+  
+    .vv-audio-wrap {
+      justify-content: flex-start;
+      gap: 12px;
+    }
+  }
+
+
+
+  @media (max-width: 500px) {
+    .vv-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .vv-logo {
+      font-size: 1.6rem;
+    }
+  }
+  
+  
+  @media (max-width: 600px) {
+    .vv-shell {
+      padding: 12px;
+    }
+  }
+  
+
+
+  @media (max-width: 600px) {
+    .vv-section {
+      margin-bottom: 32px;
+    }
+  }
+
+  
+  @media (max-width: 500px) {
+    h2.vv-section-title {
+      font-size: 1.2rem;
+    }
+  
+    .vv-track-title {
+      font-size: 1rem;
+    }
+  
+    .vv-track-meta {
+      font-size: 0.8rem;
+    }
+  }
+  
+
+  @media (max-width: 600px) {
+    audio {
+      box-shadow: 0 0 8px var(--comp-primary-3);
+    }
+  }
+  
