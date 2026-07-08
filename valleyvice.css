@@ -180,7 +180,7 @@ body {
   letter-spacing: 0.08em;
   font-weight: 500;
   text-transform: uppercase;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Bitcount Single";
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.45);
 }
 
@@ -198,6 +198,7 @@ body {
   padding: 80px 20px 40px;
   position: relative;
   z-index: 1;
+  background: url('images/background.gif') center/cover no-repeat;
 }
 
 .vv-shell {
