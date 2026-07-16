@@ -1,0 +1,629 @@
+/* ============================================================
+   VALLEYVICE RETRO THEME — FULL CSS REBUILD (v7)
+   Palette: Base + expanded complimentary colors
+   Style: Vintage Web + Synthwave + Sidebar Integration
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css?family=Bitcount%20Single:700|Bitcount%20Single:400');
+
+/* ============================================================
+   GLOBAL FONT SETTINGS
+   ============================================================ */
+
+header {
+  font-family: 'Bitcount Single';
+  font-weight: 1000;
+}
+
+body {
+  font-family: 'Bitcount Single';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Bitcount Single';
+  font-weight: 700;
+}
+
+html { 
+  font-size: 100%; 
+  scroll-behavior: smooth;
+}
+
+h1 { font-size: 4.210rem; }
+h2 { font-size: 3.158rem; }
+h3 { font-size: 2.369rem; }
+h4 { font-size: 1.777rem; }
+h5 { font-size: 1.333rem; }
+small { font-size: 0.750rem; }
+
+/* ============================================================
+   ROOT PALETTE
+   ============================================================ */
+
+:root {
+  --text: #F7DCEB;
+  --background: #0A0A0C;
+  --primary: #A89BC4;
+  --secondary: #4A2E1F;
+  --accent: #7A4A2F;
+
+  --comp-primary-1: #4FFFCF;
+  --comp-primary-2: #2BB8A6;
+  --comp-primary-3: #1F7F73;
+
+  --comp-secondary-1: #7FA8FF;
+  --comp-secondary-2: #4F6A99;
+  --comp-secondary-3: #2C3A4F;
+
+  --comp-accent-1: #FFB08A;
+  --comp-accent-2: #FF8C5C;
+  --comp-accent-3: #C96A42;
+
+  --neutral-1: #1A1A22;
+  --neutral-2: #2E2E38;
+  --neutral-3: #454553;
+
+  --radius: 10px;
+}
+
+/* ============================================================
+   GLOBAL
+   ============================================================ */
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.5;
+  padding-top: 0;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   HEADER & NAVIGATION
+   ============================================================ */
+
+.vv-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 30px;
+  background: rgba(0, 0, 0, 0.74);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  z-index: 999;
+  transition: transform 0.3s ease, background 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vv-header.hide {
+  transform: translateY(-100%);
+}
+
+.vv-logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+}
+
+.vv-nav {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+  margin-top: 10px;
+}
+
+.vv-nav a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 12px;
+  font-size: 0.9rem;
+  transition: 0.2s ease;
+}
+
+.vv-nav a:hover {
+  color: var(--comp-accent-2);
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+
+.vv-hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 24px 48px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #000;
+}
+
+.vv-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('images/background2.gif') center/cover no-repeat;
+  transform: scale(1.03);
+  opacity: 1;
+  z-index: -2;
+}
+
+
+.vv-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+
+.vv-hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.vv-hero h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 7vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Bitcount Single";
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* ============================================================
+   PAGE LAYOUT (MAIN CONTENT + SIDEBAR)
+   ============================================================ */
+
+.vv-page-layout {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
+  max-width: 1250px;       
+  margin: 0 auto;
+  gap: 50px;               
+  padding: 80px 20px 40px;
+  position: relative;
+  z-index: 1;
+  background: url('images/background.gif') center/cover no-repeat;
+}
+
+.vv-shell {
+  background: linear-gradient(180deg, rgba(10, 10, 12, 0.82) 0%, rgba(10, 10, 12, 0.82) 100%), url('images/background.jpg') center/cover no-repeat;
+  backdrop-filter: blur(6px);
+  width: 100%;
+  max-width: 900px;
+  margin: 0; 
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.vv-section,
+.vv-card,
+.vv-track-card,
+.vv-sidebar-links a {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+.vv-sidebar {
+  width: 300px;
+  flex-shrink: 0; 
+  position: sticky;
+  top: 120px; 
+}
+
+.vv-sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.vv-sidebar-links a {
+  display: block;
+  text-decoration: none;
+  font-family: 'Bitcount Single';
+  font-size: 1.2rem;
+  color: var(--primary);
+  background: var(--neutral-1);
+  border: 1px solid var(--comp-accent-1);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  transition: 0.2s ease;
+}
+
+.vv-sidebar-links a:hover {
+  background: var(--neutral-2);
+  color: var(--comp-accent-2);
+  box-shadow: 0 0 15px var(--comp-accent-2);
+  transform: translateX(4px);
+}
+
+/* ============================================================
+   SECTION TITLES & CARDS
+   ============================================================ */
+
+.vv-section {
+  margin-bottom: 50px;
+}
+
+.vv-page-video-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.vv-page-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
+
+.vv-page-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.78) 100%);
+}
+
+.vv-section-title {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  border-left: 4px solid var(--comp-accent-2);
+  padding-left: 10px;
+  color: var(--text);
+}
+
+.vv-card {
+  background: var(--neutral-1);
+  border: 1px solid var(--comp-accent-1);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-bottom: 30px;
+  transition: 0.25s ease;
+}
+
+.vv-card:hover {
+  box-shadow: 0 0 20px var(--comp-accent-2);
+  transform: translateY(-3px);
+}
+
+/* ============================================================
+   VIDEO SECTION
+   ============================================================ */
+
+.vv-card-title {
+  font-family: "Bitcount Single";
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.vv-video-frame {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 2px solid var(--primary);
+  margin-top: 10px;
+}
+
+.vv-video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================================================
+   TRACK LIST & AUDIO PLAYER
+   ============================================================ */
+
+.vv-track-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.vv-track-card {
+  display: grid;
+  grid-template-columns: 1fr 280px; 
+  align-items: center;
+  column-gap: 20px;                
+}
+
+.vv-track-title {
+  font-family: "Bitcount Single";
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.vv-track-meta {
+  font-family: "Bitcount Single";
+  font-size: 0.9rem;
+  color: var(--primary);
+}
+
+.vv-track-card audio {
+  width: 100%;            
+  min-width: 240px;       
+  margin-left: -6px;      
+  border-radius: 500px;
+  background: var(--neutral-2);
+  box-shadow: 0 0 14px var(--comp-primary-3);
+}
+
+/* Hide Audio Download/Extras */
+audio::-webkit-media-controls-download-button,
+audio::-webkit-media-controls-overflow-button,
+audio::-webkit-media-controls-cast-button {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+audio::-webkit-media-controls-enclosure {
+  overflow: hidden !important;
+}
+
+/* Play Button */
+audio::-webkit-media-controls-play-button {
+  background-color: #e9d1b5 !important;
+  border-radius: 50%;
+  transform: scale(1.3);
+  filter: brightness(1.5) drop-shadow(0 0 6px var(--comp-accent-2)) !important;
+  margin-right: 14px !important;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  margin-left: 10px !important;
+  filter: brightness(1.4);
+  color: var(--comp-accent-2);
+  font-family: 'Bitcount Single';
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: var(--neutral-3) !important;
+}
+
+/* Timeline/Scrubber */
+audio::-webkit-media-controls-timeline {
+  background-color: var(--neutral-2) !important;   
+  border-radius: 200px !important;
+}
+
+audio::-webkit-media-controls-timeline-container {
+  background-color: var(--comp-primary-1) !important; 
+}
+
+/* Volume Slider */
+audio::-webkit-media-controls-volume-slider {
+  background-color: var(--neutral-2) !important;   
+  border-radius: 200px !important;
+}
+
+audio::-webkit-media-controls-volume-slider-container {
+  background-color: var(--comp-accent-2) !important; 
+  border-radius: 50% !important;
+}
+
+
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+
+@media (max-width: 1000px) {
+  .vv-page-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .vv-sidebar {
+    width: 100%;
+    max-width: 900px;
+    position: static; 
+  }
+}
+
+@media (max-width: 600px) {
+  .vv-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+    gap: 10px;
+  }
+
+  .vv-logo {
+    font-size: 1.6rem;
+  }
+
+  .vv-nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .vv-nav a {
+    font-size: 0.85rem;
+  }
+
+  .vv-hero {
+    padding: 130px 14px 32px;
+    min-height: 88svh;
+  }
+
+  .vv-hero-content {
+    padding: 24px 20px;
+  }
+
+  .vv-shell {
+    padding: 12px;
+  }
+
+  .vv-section {
+    margin-bottom: 32px;
+  }
+
+  .vv-track-card {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
+
+  .vv-track-card audio {
+    width: 100%;
+    min-width: unset;
+    margin-left: 0;
+  }
+
+  .vv-footer {
+    padding: 40px 16px;
+  }
+
+  .vv-footer-logo {
+    font-size: 48px;
+  }
+
+  .vv-footer-tagline {
+    font-size: 14px;
+  }
+
+  .vv-footer-links a {
+    display: block;
+    margin: 8px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  h2.vv-section-title {
+    font-size: 1.2rem;
+  }
+
+  .vv-track-title {
+    font-size: 1rem;
+  }
+
+  .vv-track-meta {
+    font-size: 0.8rem;
+  }
+}
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.vv-footer {
+  background: linear-gradient(135deg, #d60000 0%, #8a0000 100%);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Bitcount Single';
+  margin-top: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 -10px 30px rgba(214, 0, 0, 0.24);
+}
+
+.vv-footer .vv-section-title {
+  display: inline-block;
+  margin: 0 0 16px;
+  border-left: 4px solid var(--comp-accent-2);
+  padding-left: 10px;
+  font-size: 1.4rem;
+}
+
+.vv-footer-logo {
+  font-size: 80px;
+  font-weight: 800;
+  margin: 0 0 20px;
+  letter-spacing: 0.04em;
+}
+
+.vv-footer-tagline {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.vv-footer-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8px;
+  padding: 10px 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #f7dceb;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 999px;
+  background: rgba(0,0,0,0.2);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+  transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.vv-footer-links a:hover {
+  opacity: 1;
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.24);
+  transform: translateY(-1px);
+}
+
+.vv-backtotop {
+  display: block;
+  width: fit-content;
+  margin: 40px auto 0;
+  padding: 10px 18px;
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.vv-backtotop:hover {
+  opacity: 0.7;
+}
+
+ .vv-footer {
+    padding: 40px 16px;
+  }
+
+  .vv-footer-logo {
+    font-size: 48px;
+  }
+
+  .vv-footer-tagline {
+    font-size: 14px;
+  }
+
+  .vv-footer-links a {
+    display: block;
+    margin: 8px 0;
+  }
