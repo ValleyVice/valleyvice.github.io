@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ValleyVice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="valleyvice.css" />
+ <link rel="stylesheet" href="/footer.css"/>
+</head>
+
+<body id="top"> 
+
+  <!-- HEADER -->
+  <header class="vv-header" id="vv-header">
+    <div class="vv-logo">VALLEYVICE</div>
+    <nav class="vv-nav">
+      <a href="#Featured">Featured</a>
+      <a href="#videos">Videos</a>
+      <a href="#music">Music</a>
+      <a href="/pages/writes.html">Writes</a>
+      <a href="#footer">About</a>
+    </nav>
+  </header>
+
+  <section class="vv-hero" aria-label="Hero">
+    <div class="vv-hero-overlay"></div>
+    <div class="vv-hero-content">
+      <h1>VALLEYVICE</h1>
+    </div>
+  </section>
+
+  <div class="vv-page-video-layer" aria-hidden="true">
+    <video class="vv-page-video" autoplay muted loop playsinline>
+      <source src="images/background2.gif" type="video/gif" />
+    </video>
+    <div class="vv-page-video-overlay"></div>
+  </div>
+
+  <!-- MASTER LAYOUT WRAPPER (Side-by-side Layout) -->
+  <div class="vv-page-layout">
+
+    <!-- MAIN CONTENT -->
+    <main class="vv-shell">
+
+      <!-- VIDEOS -->
+      <section id="Featured" class="vv-section">
+        <h2 class="vv-section-title">Featured</h2>
+        <div class="vv-card">
+          <div class="vv-card-title">Plate Connection - El Eye</div>
+          <div class="vv-video-frame">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2AvgNj8gtBE?si=Ry_Hv-tMpA9Y_qW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- MUSIC -->
+      <section id="music" class="vv-section">
+        <h2 class="vv-section-title">Music</h2>
+        <div class="vv-track-list">
+
+          <div class="vv-card vv-track-card">
+            <div>
+              <div class="vv-track-title">VVVice</div>
+              <div class="vv-track-meta">VVVice • 3:37</div>
+            </div>
+            <audio controls controlsList="nodownload noplaybackrate" >
+              <source src="/music/vvvice.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+
+          <div class="vv-card vv-track-card">
+            <div>
+              <div class="vv-track-title">Valley Hope</div>
+              <div class="vv-track-meta">VVVice • 3:12</div>
+            </div>
+            <audio controls controlsList="nodownload noplaybackrate">
+              <source src="/music/ValleyHope.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+
+          <div class="vv-card vv-track-card">
+            <div>
+              <div class="vv-track-title">Valley Thrown</div>
+              <div class="vv-track-meta">VVVice • 2:58</div>
+            </div>
+            <audio controls controlsList="nodownload noplaybackrate">
+              <source src="/music/valleythrown.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+        </div>
+      </section>
+
+      <!-- MORE VIDEOS-->
+
+      <section id="videos" class="vv-section">
+        <h2 class="vv-section-title">Videos</h2>
+        <div class="vv-card">
+          <div class="vv-card-title">Feel Less - El Eye</div>
+          <div class="vv-video-frame">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_zY-57PBvZM?si=U113zImSE3T3_3jn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </section>
+      
+      
+
+    </main> <!-- END .vv-shell -->
+
+    <!-- SIDEBAR FOR FELLOW ARTISTS (Sits outside the pattern) -->
+    <aside class="vv-sidebar">
+      <h2 class="vv-section-title" style="margin-top: 0;">Us</h2>
+      <div class="vv-sidebar-links">
+        <a href="https://soundcloud.com/valleyvice" target="_blank" rel="noopener noreferrer">ValleyVice</a>
+        <a href="https://soundcloud.com/eleye-706071954" target="_blank" rel="noopener noreferrer">El Eye</a>
+        <a href="https://soundcloud.com/inssozzz" target="_blank" rel="noopener noreferrer">Inso</a>
+      </div>
+    </aside>
+
+  </div> <!-- END .vv-page-layout -->
+
+  <!-- FOOTER -->
+  <footer id="footer" class="vv-footer">
+    <div class="vv-footer-inner">
+       <h2 class="vv-section-title">About ValleyVice</h2>
+      <h2 class="vv-footer-logo">ValleyVice</h2>
+      <p class="vv-footer-tagline">
+        ValleyVice brings the love and alternative sound.<br><br>
+        Based in California and the 559.
+      </p>
+      <div class="vv-footer-links">
+        <a href="https://www.instagram.com/valleyyyouth/" target="_blank">INSTAGRAM ↗</a>
+        <a href="#" target="_blank">Music↗</a>
+      </div>
+    </div>
+    <a href="#top" class="vv-backtotop">Back to Top ↑</a>
+  </footer>
+
+  <script>
+    let lastScroll = 0;
+    const header = document.getElementById('vv-header');
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > lastScroll && currentScroll > 80) {
+        header.classList.add('hide');   // scrolling down → hide
+      } else {
+        header.classList.remove('hide'); // scrolling up → show
+      }
+
+      lastScroll = currentScroll;
+    });
+  </script>
+</body>
+</html>
