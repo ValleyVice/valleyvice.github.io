@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cold Alone</title>
+  <style>
+    :root{
+      --bg:#0b0b10;
+      --panel:#14141c;
+      --text:#ece7e0;
+      --muted:#a6a0af;
+      --accent:#d7a7ff;
+      --border:rgba(215,167,255,.24);
+      --shadow:0 18px 60px rgba(0,0,0,.45);
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height:1.9;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    .wrap{
+      max-width:760px;
+      margin:0 auto;
+      padding:28px 20px 72px;
+    }
+
+    .topbar{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:26px;
+      font-family: ui-monospace, monospace;
+      font-size:12px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+
+    .topbar a{
+      color:var(--muted);
+      text-decoration:none;
+    }
+
+    .topbar a:hover{
+      color:var(--accent);
+    }
+
+    .hero{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), transparent), var(--panel);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:34px 28px;
+      box-shadow:var(--shadow);
+      margin-bottom:22px;
+    }
+
+    .kicker{
+      font-family: ui-monospace, monospace;
+      font-size:11px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--accent);
+      margin-bottom:10px;
+    }
+
+    h1{
+      margin:0 0 10px;
+      font-size:clamp(2rem, 4vw, 3.2rem);
+      line-height:1.05;
+    }
+
+    .meta{
+      margin:0;
+      color:var(--muted);
+      font-size:.98rem;
+    }
+
+    article{
+      background:rgba(255,255,255,.02);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;
+      padding:30px 28px;
+      box-shadow:var(--shadow);
+    }
+
+    .poem{
+      max-width: 42rem;
+      margin: 0 auto;
+      font-size:1.12rem;
+    }
+
+    .poem p{
+      margin:0 0 1.1em;
+      white-space:pre-wrap;
+    }
+
+    .footer{
+      margin-top:18px;
+      text-align:center;
+      color:var(--muted);
+      font-size:.9rem;
+      opacity:.9;
+    }
+
+    @media (max-width: 640px){
+      .wrap{ padding-inline:14px; }
+      .hero, article{ padding:22px 18px; border-radius:16px; }
+      .topbar{ gap:10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="topbar">
+      <a href="/">HOME</a>
+      <a href="/#featured">Featured</a>
+      <a href="/pages/writes.html#poems">POETRY</a>
+      <a href="/pages/writes.html#essays">ESSAYS</a>
+      <a href="/#music">MUSIC</a>
+      <a href="/#videos">Videos</a>
+
+    </nav>
+
+    <section class="hero">
+      <div class="kicker">Poetry</div>
+      <h1>Cold Alone</h1>
+      <p class="meta">How Brood. - 7/12</p>
+    </section>
+
+    <article>
+      <div class="poem">
+
+        <p>
+        we let the wind in<br>
+        nothing ever felt like this<br>
+        cold alone,<br>
+        </p>
+
+        <p>
+        it's not that dark, the windows are blacked out<br>
+        Im shivering so bad, i wish you were here<br>
+        I was so late,<br>
+        I felt crushed,<br>
+        I saw, i, fall victim to the glorification of my partner and our time<br>
+        </p>
+      
+
+    
+        <p>
+        im so cold and high, <br>
+        im so high <br>
+        i dont wanna see the light at five <br>
+        because thats when i find sleep <br>
+        and your wake up time.<br>
+        </p>
+      </div>
+    </article>
+
+    <div class="footer">
+
+<a href="/pages/writes.html" style="text-decoration: none; color: white; transition: color 0.3s;" onmouseover="this.style.color='red'" onmouseout="this.style.color='#d7a7ff'">End.</a>
+
+    </div>
+  </div>
+</body>
+</html>
