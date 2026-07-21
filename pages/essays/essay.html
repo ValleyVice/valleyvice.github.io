@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Essay Title</title>
+  <title>If I Never Sleep I Never Rest</title>
   <style>
     :root{
       --bg:#0b0b10;
@@ -22,12 +22,12 @@
       background:var(--bg);
       color:var(--text);
       font-family: Georgia, "Times New Roman", serif;
-      line-height:1.85;
+      line-height:1.9;
       -webkit-font-smoothing:antialiased;
     }
 
     .wrap{
-      max-width:860px;
+      max-width:760px;
       margin:0 auto;
       padding:28px 20px 72px;
     }
@@ -76,7 +76,7 @@
     h1{
       margin:0 0 10px;
       font-size:clamp(2rem, 4vw, 3.2rem);
-      line-height:1.08;
+      line-height:1.05;
     }
 
     .meta{
@@ -89,38 +89,20 @@
       background:rgba(255,255,255,.02);
       border:1px solid rgba(255,255,255,.08);
       border-radius:18px;
-      padding:34px 30px;
+      padding:30px 28px;
       box-shadow:var(--shadow);
     }
 
-    article .content{
-      max-width:62ch;
-      margin:0 auto;
-      font-size:1.08rem;
+    .poem{
+      max-width: 42rem;
+      margin: 0 auto;
+      font-size:1.12rem;
     }
 
-    article p{
-      margin:0 0 1.25em;
+    .poem p{
+      margin:0 0 1.1em;
+      white-space:pre-wrap;
     }
-
-    article p:first-of-type::first-letter{
-      float:left;
-      font-size:3.6rem;
-      line-height:.85;
-      padding-right:.12em;
-      color:var(--accent);
-    }
-
-    h2{
-      margin:1.8em 0 .6em;
-      font-family: ui-monospace, monospace;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      color:var(--accent);
-      font-size:.9rem;
-    }
-
-    a{ color:#f0c9ff; }
 
     .footer{
       margin-top:18px;
@@ -130,11 +112,15 @@
       opacity:.9;
     }
 
+    a{
+      color: var(--text);
+      text-decoration-style: none;
+    }
+
     @media (max-width: 640px){
       .wrap{ padding-inline:14px; }
       .hero, article{ padding:22px 18px; border-radius:16px; }
       .topbar{ gap:10px; }
-      article .content{ font-size:1.03rem; }
     }
   </style>
 </head>
@@ -142,31 +128,52 @@
   <div class="wrap">
     <nav class="topbar">
       <a href="/">HOME</a>
-      <a href="/writing.html">WRITING</a>
-      <a href="/poetry.html">POETRY</a>
-      <a href="/essays.html">ESSAYS</a>
-      <a href="/visuals.html">VISUALS</a>
-      <a href="/music.html">MUSIC</a>
+      <a href="/#featured">Featured</a>
+      <a href="/pages/writes.html#poems">POETRY</a>
+      <a href="/pages/writes.html#essays">ESSAYS</a>
+      <a href="/#music">MUSIC</a>
+      <a href="/#videos">Videos</a>
+
     </nav>
 
     <section class="hero">
-      <div class="kicker">Essay</div>
-      <h1>Essay Title</h1>
-      <p class="meta">Optional subtitle or date</p>
+      <div class="kicker">Poetry</div>
+      <h1>Originality, and the Valley</h1>
+      <p class="meta">Yum- 7/21</p>
     </section>
 
     <article>
-      <div class="content">
-        <p>Paste your introduction here.</p>
+      <div class="poem">
 
-        <h2>Section Title</h2>
-        <p>Paste body paragraphs here. This layout keeps the text centered, readable, and calm.</p>
+        <p>
 
-        <p>Add more paragraphs as needed.</p>
+        I was sore from last night it was the best I worked a full Shift <br>
+          Working in the service industry, you see the pinnacle of human originality. <br>
+          You see 3 Number Fours and a couple orders of the same thing. But in the <br> 
+          Valley, I'm tired of fast food. Less and less people coming, thinking, <br>
+          Appreciating what they put into themselves. That's the art in the Valley.<br>
+          When no one even wants to order anything new; no one wants to make any- <br>
+          thing new. It feels like a genuine cesspool. I feel like everyone's <br>
+          waiting for a new Big Mac or a Jumbo Jack, especially when there's <br>
+          better or different options. Everyone's so desperate for taste, a <br>
+          type of taste, then go for the usual. The go to, the same outfit, <br>
+          the same order, the same size the same fries, then we suffer for it. <br>
+          We all fall into complacency sooo easily, I'm victim. <br>
+
+          I hear so much: "we dont hae time for that", "I don't know how to <br>
+          make that", "it's too much". <br>
+          <br>
+          <br>
+          Okay, don't tell me it'll ever taste as good as when you make it.
+  
+
+        </p>
       </div>
     </article>
 
-    <div class="footer">End of essay</div>
+    <div class="footer">
+<a href="/pages/writes.html" style="text-decoration: none; color: white; transition: color 0.3s;" onmouseover="this.style.color='red'" onmouseout="this.style.color='#d7a7ff'">End.</a>
+    </div>
   </div>
 </body>
 </html>
